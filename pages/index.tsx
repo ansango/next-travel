@@ -1,8 +1,10 @@
+import { Container } from "components/common";
 
-export default function Home() {
+
+const Home = () => {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </div>
+   <Container>Hola</Container>
   );
-}
+};
+
+export default Home;
