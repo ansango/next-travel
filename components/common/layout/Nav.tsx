@@ -1,14 +1,13 @@
-"use client";
 import { useState, useEffect } from "react";
 import {
   Navbar,
   MobileNav,
   Typography,
-  Button,
   IconButton,
   Avatar,
-} from "@material-tailwind/react";
-import { Container } from "./Container";
+  Container,
+} from "components/common";
+
 import { useSession } from "next-auth/react";
 const navList = (
   <ul className="py-5 lg:py-0 mb-4 mt-2 flex flex-col gap-6 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
@@ -116,9 +115,7 @@ export const Nav = () => {
               />
             )}
           </div>
-          <MobileNav open={openNav}>
-            {navList}
-          </MobileNav>
+          <MobileNav open={openNav}>{navList}</MobileNav>
         </Navbar>
       </Container>
     </header>
